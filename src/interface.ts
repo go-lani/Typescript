@@ -31,10 +31,6 @@ class Rectangle implements Shape {
   }
 }
 
-const rect = new Rectangle(10, 5);
-console.log('public height',rect.width);
-console.log('private height', rect.height); // 컴파일 에러: height의 속성을 private이므로 Rectangle 클래스 내부에서만 사용이 가능하다
-
 const shapes: Shape[] = [new Circle(5), new Rectangle(10, 5)];
 
 console.log('shapes', shapes);
@@ -42,3 +38,25 @@ console.log('shapes', shapes);
 shapes.forEach((shape) => {
   console.log(shape.getArea());
 });
+
+// 일반 객체를 interface 타입으로 설정하기
+interface Person {
+  name: string;
+  age?: number; // ?의 의미는 설정을 해도 되고, 안해도 된다는 의미
+}
+
+interface Developer {
+  name: string;
+  age?: number;
+  skills: string[];
+}
+
+const person: Person = {
+  name: '이철환',
+  age: 29,
+};
+
+const developer: Developer = {
+  name: 'publee',
+  skills: ['HTML', 'CSS', 'Javascript', 'React']
+}
