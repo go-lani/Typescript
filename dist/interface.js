@@ -10,5 +10,24 @@ var Circle = /** @class */ (function () {
     };
     return Circle;
 }());
-var shape = new Circle(3);
-console.log(shape.getArea());
+var Rectangle = /** @class */ (function () {
+    // 멤버 변수를 생략하고, public 또는 private을 지정
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.width = width;
+        this.height = height;
+    }
+    Rectangle.prototype.getArea = function () {
+        return this.width * this.height;
+    };
+    return Rectangle;
+}());
+var rect = new Rectangle(10, 5);
+console.log('public height', rect.width);
+console.log('private height', rect.height);
+var shapes = [new Circle(5), new Rectangle(10, 5)];
+console.log('shapes', shapes);
+shapes.forEach(function (shape) {
+    console.log(shape.getArea());
+});

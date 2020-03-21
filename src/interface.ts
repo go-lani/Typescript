@@ -6,6 +6,7 @@ interface Shape {
 
 // Circle이란 클래스가 인터페이스 Shape를 구현하고 있다고 선언
 class Circle implements Shape {
+  // 멤버 변수
   radius: number;
 
   constructor(radius: number) {
@@ -18,6 +19,26 @@ class Circle implements Shape {
   }
 }
 
-const shape = new Circle(3);
+class Rectangle implements Shape {
+  // 멤버 변수를 생략하고, public 또는 private을 지정
+  constructor(public width: number, private height: number) {
+    this.width = width;
+    this.height = height;
+  }
 
-console.log(shape.getArea())
+  getArea() {
+    return this.width * this.height
+  }
+}
+
+const rect = new Rectangle(10, 5);
+console.log('public height',rect.width);
+console.log('private height', rect.height); // 컴파일 에러: height의 속성을 private이므로 Rectangle 클래스 내부에서만 사용이 가능하다
+
+const shapes: Shape[] = [new Circle(5), new Rectangle(10, 5)];
+
+console.log('shapes', shapes);
+
+shapes.forEach((shape) => {
+  console.log(shape.getArea());
+});
