@@ -1,3 +1,4 @@
+// 일관성 있게 사용하기 위해 interface는 주로 class와 관련된 타입을 붙일때 사용
 // Shape interface에는 꼭 getArea라는 함수가 존재해야한다.
 // getArea의 리턴 값은 Number이다.
 interface Shape {

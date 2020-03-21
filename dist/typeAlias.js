@@ -1,0 +1,16 @@
+"use strict";
+// type 은 특정 타입에 별칭을 붙이는 용도로 사용한다.
+// 이를 사용하여 객체를 위한 타입을 설정할 수도 있고, 배열, 또는 그 어떤 타입이던 별칭을 지어줄 수 있다.
+var typePerson = {
+    name: '이철환',
+    age: 29,
+};
+var typeDeveloper = {
+    name: 'publee',
+    age: 29,
+    skills: ['HTML', 'CSS', 'Javascript', 'React'],
+};
+// people의 배열에는 People의 타입을 가진 요소만 들어올 수 있다.
+// 한마디로 TypePerson 객체의 필수로 필요한 name, age가 없다면 에러를 낸다.
+var people = [typePerson, typeDeveloper];
+console.log(people);
