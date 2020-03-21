@@ -45,9 +45,13 @@ interface Person {
   age?: number; // ?의 의미는 설정을 해도 되고, 안해도 된다는 의미
 }
 
-interface Developer {
-  name: string;
-  age?: number;
+// interface Developer {
+//   name: string;
+//   age?: number;
+//   skills: string[];
+// }
+
+interface Developer extends Person {
   skills: string[];
 }
 
@@ -60,3 +64,5 @@ const developer: Developer = {
   name: 'publee',
   skills: ['HTML', 'CSS', 'Javascript', 'React']
 }
+
+console.log(person, developer)

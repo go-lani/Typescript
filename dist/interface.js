@@ -23,11 +23,17 @@ var Rectangle = /** @class */ (function () {
     };
     return Rectangle;
 }());
-var rect = new Rectangle(10, 5);
-console.log('public height', rect.width);
-console.log('private height', rect.height);
 var shapes = [new Circle(5), new Rectangle(10, 5)];
 console.log('shapes', shapes);
 shapes.forEach(function (shape) {
     console.log(shape.getArea());
 });
+var person = {
+    name: '이철환',
+    age: 29,
+};
+var developer = {
+    name: 'publee',
+    skills: ['HTML', 'CSS', 'Javascript', 'React']
+};
+console.log(person, developer);
