@@ -4,8 +4,12 @@ import './App.css';
 import Greetings from './Greetings';
 
 function App() {
+  const checkName = (name: string) => {
+    alert(name);
+  }
+
   return (
-    <Greetings name="gg" />
+    <Greetings onClick={checkName} />
   );
 }
 
