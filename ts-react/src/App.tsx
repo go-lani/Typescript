@@ -5,6 +5,7 @@ import Counter from './Counter';
 import MyForm from './MyForm';
 import CounterReducer from './CounterReducer';
 import ReducerSample from './ReducerSample';
+import { SampleProvider } from './ContextSample';
 
 function App() {
   const checkName = (name: string) => {
@@ -21,7 +22,9 @@ function App() {
       <Counter />
       <MyForm onSubmit={onSubmit} />
       <CounterReducer />
-      <ReducerSample />
+      <SampleProvider>
+        <ReducerSample />
+      </SampleProvider>
     </>
   );
 }
