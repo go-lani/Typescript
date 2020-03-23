@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greetings from './Greetings';
+import Counter from './Counter';
 
 function App() {
   const checkName = (name: string) => {
@@ -9,7 +10,10 @@ function App() {
   }
 
   return (
-    <Greetings onClick={checkName} />
+    <>
+      <Greetings onClick={checkName} />
+      <Counter />
+    </>
   );
 }
 
